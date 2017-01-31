@@ -1,0 +1,53 @@
+# Name
+  Size:
+      Empty.
+      Not empty.
+  Repeated name:
+      Same Supplier.
+      Different Supplier.
+  Characters:
+      Has Special Characters.
+      No Special Characters.
+  
+# Barcode
+  Length of barcode:
+      Empty.
+      Less than 100.
+      100.
+      9999.
+      More than 9999.  
+  Barcode Contains:
+      Same barcode as another item.
+      Non Numeric Barcode.
+      Numeric Barcode between 100 and 9999
+	  
+# Quantity
+  Size:
+      Empty.
+	  Not Empty.
+  Quantity Contains:
+      Non Numeric.
+	  Numeric Between 0 and 100.
+	  Numeric Less than 0.
+	  Numeric Over 100.
+	  Numeric - 0.
+	  Numeric - 100.
+
+# Supplier
+  Size:
+      Empty.
+	  Not Empty.
+  Repeated Supplier:
+      Same Item Name.
+	  Different Item Name.
+  Supplier Contains:
+      Special Characters.
+	  No Special Characters.
+	  
+# Item Type
+  Size:
+      Empty.
+	  Not Empty.
+  Item Type Contains:
+      Allowed Type.
+	  Not Allowed Type.
