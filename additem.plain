@@ -11,18 +11,19 @@
   
 # Barcode
   Length of barcode:
-      Empty.
-      Less than 100.
-      100.
-      9999.
-      More than 9999.  
+      Empty.       
+      Not Empty.
   Barcode Contains:
-      Same barcode as another item.
-      Non Numeric Barcode.
-      Numeric Barcode between 100 and 9999
+      Same barcode as another item.        
+      Non Numeric Barcode.                     
+      Numeric Barcode between 100 and 9999. 
+	  100.                                 
+      9998.                                
+	  Over 9998.                            
+	  Less than 100.                        
 	  
 # Quantity
-  Size:
+  Quantity Size:
       Empty.
 	  Not Empty.
   Quantity Contains:
@@ -34,18 +35,15 @@
 	  Numeric - 100.
 
 # Supplier
-  Size:
+  Supplier Size:
       Empty.
 	  Not Empty.
-  Repeated Supplier:
-      Same Item Name.
-	  Different Item Name.
   Supplier Contains:
       Special Characters.
 	  No Special Characters.
 	  
 # Item Type
-  Size:
+  Type Size:
       Empty.
 	  Not Empty.
   Item Type Contains:

@@ -1,0 +1,94 @@
+
+Test Case 1  		<single>
+   Size :  Empty
+
+
+Test Case 2  		<error>
+   Characters :  Has Special Characters
+
+
+Test Case 3  		<error>
+   Repeated name :  Same Supplier
+
+
+Test Case 4  		<single>
+   Length of barcode :  Empty
+
+
+Test Case 5  		<error>
+   Barcode Contains :  Same barcode as another item
+
+
+Test Case 6  		<error>
+   Barcode Contains :  Non Numeric Barcode
+
+
+Test Case 7  		<single>
+   Barcode Contains :  100
+
+
+Test Case 8  		<single>
+   Barcode Contains :  9998
+
+
+Test Case 9  		<error>
+   Barcode Contains :  Over 9998
+
+
+Test Case 10 		<error>
+   Barcode Contains :  Less than 100
+
+
+Test Case 11 		<single>
+   Quantity Size :  Empty
+
+
+Test Case 12 		<error>
+   Quantity Contains :  Non Numeric
+
+
+Test Case 13 		<error>
+   Quantity Contains :  Numeric Less than 0
+
+
+Test Case 14 		<error>
+   Quantity Contains :  Numeric Over 100
+
+
+Test Case 15 		<single>
+   Quantity Contains :  Numeric - 0
+
+
+Test Case 16 		<single>
+   Quantity Contains :  Numeric - 100
+
+
+Test Case 17 		<single>
+   Supplier Size :  Empty
+
+
+Test Case 18 		<error>
+   Supplier Contains :  Special Characters
+
+
+Test Case 19 		<single>
+   Type Size :  Empty
+
+
+Test Case 20 		<error>
+   Item Type Contains :  Not Allowed Type
+
+
+Test Case 21 		(Key = 2.2.2.2.3.2.2.2.2.2.1.)
+   Size               :  Not empty
+   Characters         :  No Special Characters
+   Repeated name      :  Different Supplier
+   Length of barcode  :  Not Empty
+   Barcode Contains   :  Numeric Barcode between 100 and 9999
+   Quantity Size      :  Not Empty
+   Quantity Contains  :  Numeric Between 0 and 100
+   Supplier Size      :  Not Empty
+   Supplier Contains  :  No Special Characters
+   Type Size          :  Not Empty
+   Item Type Contains :  Allowed Type
+
