@@ -1,2 +1,0 @@
-For file additem.plain: 30720 test frames.
-

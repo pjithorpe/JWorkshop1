@@ -1,18 +1,18 @@
 
 Test Case 1  		<single>
-   Size :  Empty
+   Name Size :  Empty
 
 
 Test Case 2  		<error>
-   Characters :  Has Special Characters
+   Name Characters :  Has Special Characters
 
 
 Test Case 3  		<error>
-   Repeated name :  Same Supplier
+   Name Repeated :  Same Supplier
 
 
 Test Case 4  		<single>
-   Length of barcode :  Empty
+   Barcode Size :  Empty
 
 
 Test Case 5  		<error>
@@ -72,7 +72,7 @@ Test Case 18 		<error>
 
 
 Test Case 19 		<single>
-   Type Size :  Empty
+   Item Type Size :  Empty
 
 
 Test Case 20 		<error>
@@ -80,15 +80,15 @@ Test Case 20 		<error>
 
 
 Test Case 21 		(Key = 2.2.2.2.3.2.2.2.2.2.1.)
-   Size               :  Not empty
-   Characters         :  No Special Characters
-   Repeated name      :  Different Supplier
-   Length of barcode  :  Not Empty
-   Barcode Contains   :  Numeric Barcode between 100 and 9999
+   Name Size          :  Not empty
+   Name Characters    :  No Special Characters
+   Name Repeated      :  Different Supplier
+   Barcode Size       :  Not Empty
+   Barcode Contains   :  Numeric Barcode between 99 and 9999
    Quantity Size      :  Not Empty
    Quantity Contains  :  Numeric Between 0 and 100
    Supplier Size      :  Not Empty
    Supplier Contains  :  No Special Characters
-   Type Size          :  Not Empty
+   Item Type Size     :  Not Empty
    Item Type Contains :  Allowed Type
 
