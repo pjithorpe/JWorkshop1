@@ -2,10 +2,13 @@ package gla.cs.joose.coursework.invmgt.model;
 
 import static org.junit.Assert.*;
 
-import org.junit.After;
+import java.io.File;
+
+import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
 
+@SuppressWarnings("all")
 public class Task10 {
 	
 	long barcode;
@@ -15,6 +18,7 @@ public class Task10 {
 	String supplier;
 	String desc;
 	
+	// Set up an example item with valid inputs before each test
 	@Before
 	public void setUpItem() {
 		barcode = 1234;
@@ -23,6 +27,27 @@ public class Task10 {
 		qty = 3;
 		supplier = "Lenovo";
 		desc = "a laptop";
+	}
+	
+	// Delete the test created items from the file system
+	@AfterClass
+	public void deleteItem() {
+		String item_store_file_path = "inventorystore";
+		boolean exist = false;
+		
+		File folder = new File(item_store_file_path);
+		if(folder.exists()){
+			if(folder.isDirectory()){
+				exist = true;
+				folder.delete();
+			}				
+		}
+		
+		if(!exist){
+			folder.mkdir();
+		}
+		
+		
 	}
 	
 	@Test
@@ -39,7 +64,7 @@ public class Task10 {
 		assertEquals(false, specialCharsAllowed);
 	}
 	
-	//Two items should not be allowed to have the same name and same supplier
+	// Two items should not be allowed to have the same name and same supplier
 	@Test
 	public void testRepeatedNameNotAllowedCase3() {
 		barcode = 6767;
@@ -50,6 +75,8 @@ public class Task10 {
 		assertEquals(false, repeatedItemAllowed);
 	}
 	
+	// This will not compile because the barcode Long value cannot be set to null. Therefore an error should
+	// be expected when the test is run.
 	@Test(expected=Error.class)
 	public void testEmptyBarcodeNotAllowedCase4() {
 		boolean emptyBarcodeAllowed = ItemFactory.addItem(null, itemName, itemType_s, qty, supplier, desc);
@@ -68,12 +95,16 @@ public class Task10 {
 		assertEquals(false, repeatedItemAllowed);
 	}
 	
+	// This will not compile because the quantity Integer value cannot be set to null. Therefore an error should
+	// be expected when the test is run.
 	@Test(expected=Error.class)
     public void testQuantitySizeEmptyCase11() {
 		boolean lessThanZeroQuantity = ItemFactory.addItem(barcode, itemName, itemType_s, null, supplier, desc);
 		fail("Exception not thrown");
     }
 
+	// This will not compile because the quantity Integer value cannot be set to a String. Therefore an error should
+	// be expected when the test is run.
     @Test(expected=Error.class)
     public void testQuantityNonNumericCase12() {
     	boolean nonNumericQuantity = ItemFactory.addItem(barcode, itemName, itemType_s, itemName, supplier, desc);
